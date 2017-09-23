@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+    <head>
+<!-- Meta data voor de website --> 
+        <meta charset="en">
+        <title>CryptoLists | Compare CryptoCurrencies</title>
+        <meta name="description" content="CryptoLists | Compare CryptoCurrencies">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Link met de Stylesheet --> 
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="contactformuliercss.css">
+<!-- Link naar de Jquery library. --> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Hier een script omdat externe scripts veel te overrated zijn enzo -->
+        <script>
+                        $(document).ready(function(){
+                          // Voegd smooth scrolling toe bij elke interne link
+                          $("a").on('click', function(event) {
+
+                            // Deze hash heeft een value nodig anders niet werken eh
+                            if (this.hash !== "") {
+                              // Stopt standaard lelijke scrolling stuff
+                              event.preventDefault();
+
+                              // Slaat de hash van hierboven op enzo
+                              var hash = this.hash;
+
+                              // Gebruikt Jquery om de geweldige custom smooth toe te voegen
+                              // Het nummertje 800 is de snelheid van hoelang het scrollen duurt
+                              $('html, body').animate({
+                                scrollTop: $(hash).offset().top
+                              }, 800, function(){
+
+                                // voegt de has toe aan de link
+                                window.location.hash = hash;
+                              });
+                            } // Einde if
+                          });
+                        });
+        </script>
+    </head>
+    <body>  
+<!-- Begin navigatie balk --> 
+        <nav class="navRow">
+            <ul>
+                <li id="navLogo">
+                    <svg class="icon icon-Logo-32-icon"><use xlink:href="#icon-Logo-32-icon"></use></svg>
+                    <span>CryptoLists</span>
+                </li>
+                <a href="index.html" class="gaweg"><li>Home</li></a>
+                <a href="vergelijken.html" class="gaweg"><li>Vergelijk</li></a>
+                <a href="#spring" class="gaweg"><li>Uitleg</li></a>
+                <a href="contact.html" class="gaweg"><li>Contact</li></a>
+            </ul>
+        </nav>
+<!-- Einde navigatie balk --> 
+<!-- Begin hoofdbalk Balk --> 
+        <div class="heroRow">
+            <div class="centerContent">
+                <h1>Vergelijk Cryptocurrencies</h1>
+                <p>Het vergelijken van cryptocurrencies is nog nooit zo <br> makkelijk geweest!</p>
+                <div class="buttonRow">
+                    <a href="#spring"><button type="button" class="btn">Uitleg</button></a>
+                    <a href="vergelijken.html"><button type="button" class="btn btnPro">Vergelijk</button></a>
+                </div>
+            </div>
+        </div>
+<!-- Einde hoofdbalk --> 
+<!-- Begin contact --> 
+        <div class="emailRow">
+            <div class="centerContent">
+                <h1>Hulp nodig? Neem contact op!</h1>
+                    <div class="container">  
+                          <form id="contact" action="" method="post">
+                            <h3>Snel Contact</h3>
+                            <fieldset>
+                              <input placeholder="Jouw naam" type="text" tabindex="1" required autofocus>
+                            </fieldset>
+                            <fieldset>
+                              <input placeholder="Jouw e-mail adres" type="email" tabindex="2" required>
+                            </fieldset>
+                            <fieldset>
+                              <input placeholder="Jouw telefoon nummer" type="tel" tabindex="3" required>
+                            </fieldset>
+                            <fieldset>
+                              <input placeholder="https://www.example.com/" type="url" tabindex="4" required>
+                            </fieldset>
+                            <fieldset>
+                              <textarea placeholder="Type hier jouw bericht...." tabindex="5" required></textarea>
+                            </fieldset>
+                            <fieldset>
+                              <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Verstuur</button>
+                            </fieldset>
+                          </form>
+                    </div>      
+            </div>
+        </div>
+<!-- Einde contact form -->
+<!-- div #spring is de plek waar de knop UITLEG naar toe gaat.-->
+        <div id="spring"> </div>
+<!-- Begin uitleg gedeelte --> 
+        <div class="featuresRow">
+            <div class="centerContent">
+                <div class="featuredItemRow">
+                    <div class="featuredItemBox">
+                        <h1>Cryptocurrency Uitleg</h1>
+                        <p>Als u nieuw bent met cryptocurrencies, kijk niet verder. Bekijk onze gratis videocursus! Begin met geen ervaring en werk je weg om een meester te worden!</p>
+                    </div>
+                    <div class="featuredItemBox">
+                        <video width="320" height="240" controls> 
+                            <source src="video/bitcoinuitleg.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="featuredItemRow">
+                    <div class="featuredItemBox">
+                        <h1>Mining Uitleg</h1>
+                        <p>Wilt u zelf geld verdienen doormiddel van cryptocurrencies? Dat is mogelijk! Iedereen kan een "miner" worden. Bekijk deze video voor meer uitleg.</p>
+                    </div>
+                    <div class="featuredItemBox">
+                        <iframe width="320" height="240" src="https://www.youtube-nocookie.com/embed/GmOzih6I1zs?rel=0&amp;controls=1&amp;showinfo=1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Einde uitleg gedeelte, die een beetje verwarrend is om te lezen. --> 
+        <div class="onderstalaagje">
+            <h1>Genoeg geleerd? </h1>
+            <a href="vergelijken.html"><button type="button" class="btn btnPro">Vergelijk</button></a>
+        </div>
+<!-- Einde call to action balk --> 
+<!-- Begin footer --> 
+        <footer class="socialRow">
+            <div class="centerContent">
+                <ul>
+                    <li><svg class="icon icon-youtube"><use xlink:href="#icon-youtube"></use></svg></li>
+                    <li><svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg></li>
+                    <li><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></li>
+                    <li><svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg></li>
+                    <li><svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg></li>
+                </ul>
+            </div>
+        </footer>
+<!-- Einde footer --> 
+<!-- Begin Icon codes, generated door: icomoon.io het zijn dus geen afbeeldingen maar SVG dingen die dus eigenlijk een soort van pixel voor pixel in HTML worden gemaakt --> 
+                <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                <symbol id="icon-github" viewBox="0 0 32 32">
+                <title>github</title>
+                <path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
+                </symbol>
+                <symbol id="icon-youtube" viewBox="0 0 32 32">
+                <title>youtube</title>
+                <path d="M31.681 9.6c0 0-0.313-2.206-1.275-3.175-1.219-1.275-2.581-1.281-3.206-1.356-4.475-0.325-11.194-0.325-11.194-0.325h-0.012c0 0-6.719 0-11.194 0.325-0.625 0.075-1.987 0.081-3.206 1.356-0.963 0.969-1.269 3.175-1.269 3.175s-0.319 2.588-0.319 5.181v2.425c0 2.587 0.319 5.181 0.319 5.181s0.313 2.206 1.269 3.175c1.219 1.275 2.819 1.231 3.531 1.369 2.563 0.244 10.881 0.319 10.881 0.319s6.725-0.012 11.2-0.331c0.625-0.075 1.988-0.081 3.206-1.356 0.962-0.969 1.275-3.175 1.275-3.175s0.319-2.587 0.319-5.181v-2.425c-0.006-2.588-0.325-5.181-0.325-5.181zM12.694 20.15v-8.994l8.644 4.513-8.644 4.481z"></path>
+                </symbol>
+                <symbol id="icon-twitter" viewBox="0 0 32 32">
+                <title>twitter</title>
+                <path d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+                </symbol>
+                <symbol id="icon-instagram" viewBox="0 0 32 32">
+                <title>instagram</title>
+                <path d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z"></path>
+                <path d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z"></path>
+                <path d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z"></path>
+                </symbol>
+                <symbol id="icon-facebook" viewBox="0 0 32 32">
+                <title>facebook</title>
+                <path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+                </symbol>
+                <symbol id="icon-Logo-32-icon" viewBox="0 0 32 32">
+                <title>Logo-32-icon</title>
+                <path d="M24.1 9.6c0 0-0.1 0.1-0.1 0.2 0.8 0.5 1.5 1.1 2.3 1.6l0.3-0.2c0 0 0 0 0-0.1 0 0 0-0.1 0.1-0.1-0.3-0.5-0.2-1 0.2-1.3 0.2-0.1 0.3-0.2 0.5-0.2v-0.1c-0.8-0.5-1.6-0.8-2.4-1.3 0 0-0.1 0.2-0.1 0.2-0.4-0.3-0.9-0.2-1.2 0.3-0.3 0.2-0.1 0.7 0.4 1z"></path>
+                <path d="M26.9 11c0 0-0.2 0.1-0.1 0.1 0.6 0.8 1 1.6 1.6 2.4h0.1c-0.1-0.6 0.2-1 0.7-1.1 0.1 0 0.1 0 0.2 0 0.2 0 0.4 0.1 0.5 0.2l0.1-0.1v-0.5c-0.5-0.7-1.2-1.4-1.8-2.2 0 0-0.1 0.1-0.1 0.1-0.3-0.4-0.8-0.6-1.2-0.2-0.4 0.3-0.4 0.9 0 1.3z"></path>
+                <path d="M30 13.2c-0.1-0.5-0.5-0.9-1-0.7-0.5 0.1-0.7 0.6-0.5 1.1 0 0-0.2 0-0.2 0 0.2 1 0.3 2 0.5 2.9l0.2 0.1c0.2-0.4 0.5-0.6 0.8-0.6 0.1 0 0.2 0 0.3 0 0.2 0.1 0.3 0.2 0.4 0.3h0.1l0.3-0.3c-0.2-0.9-0.5-1.8-0.8-2.8 0.1-0.1-0.1 0-0.1 0z"></path>
+                <path d="M30.6 17.4c0.1-0.5 0-1-0.5-1.2-0.5-0.1-0.9 0.2-1 0.7 0 0-0.2-0.1-0.2-0.1-0.3 1-0.6 1.9-0.9 2.8l0.2 0.2c0 0 0.1 0 0.1 0.1 0.2-0.2 0.5-0.3 0.7-0.3s0.4 0.1 0.6 0.2 0.3 0.3 0.3 0.6l0.3-0.1c0.2-0.9 0.4-1.9 0.6-2.8 0-0.1-0.2-0.1-0.2-0.1z"></path>
+                <path d="M29.5 19.9c-0.4-0.4-0.9-0.2-1.2 0.2 0 0-0.1-0.2-0.1-0.1-0.6 0.8-1.3 1.4-1.9 2.1l0.1 0.4c0.1 0 0.1 0 0.2 0 0.4 0 0.6 0.2 0.8 0.5 0.1 0.2 0.1 0.4 0.1 0.5v0h0.4c0.6-0.7 1.1-1.5 1.7-2.3 0 0-0.1-0.1-0.1-0.1 0.4-0.3 0.4-0.9 0-1.2z"></path>
+                <path d="M26.2 22.7c0 0 0-0.2-0.1-0.2-0.9 0.4-1.7 0.7-2.5 1.1l-0.1 0.4c0.5 0.1 0.8 0.5 0.8 1 0 0.2-0.1 0.3-0.1 0.5l0.3 0.2c0.8-0.4 1.6-0.9 2.4-1.4 0 0-0.1-0.2-0.1-0.2 0.5-0.2 0.7-0.7 0.5-1.2-0.2-0.3-0.7-0.4-1.1-0.2z"></path>
+                <path d="M23.4 24.2c0 0 0.1-0.2 0-0.2-1-0.1-1.8-0.2-2.7-0.3l-0.1 0.1v0.1c0 0 0 0.1-0.1 0.2 0.1 0.2 0.2 0.4 0.2 0.6 0 0.3-0.1 0.5-0.3 0.7 0 0 0 0-0.1 0v0.2l0.2 0.4c0.9 0.1 1.8 0 2.7 0 0 0 0-0.2 0-0.2 0.5 0 0.9-0.2 0.9-0.8 0.2-0.4-0.2-0.8-0.7-0.8z"></path>
+                <path d="M20.4 24.1c0 0 0.1-0.1 0.1-0.1-0.1-0.7-0.1-1.3-0.2-1.7 0.1-0.5 0.2-0.9 0.2-1.4 0-1.3-1.2-4.6-2.4-7.5l1.2 2.8c0 0 1.1-0.8 1.2-1.2 0.2-2.1-4.7-7-4.7-7v0c0 0-4.9 4.9-4.7 7 0 0.4 1.2 1.2 1.2 1.2l1.2-2.8c-1.2 2.9-2.4 6.2-2.4 7.5 0 0.7 0.1 1.3 0.4 2 0 0.3-0.1 0.7-0.1 1.1 0 0 0.1 0.1 0.1 0.1-0.3 0.4-0.4 0.9 0 1.3 0.4 0.3 0.9 0.2 1.2-0.2 0 0 0.1 0.1 0.1 0.1 0.4 0 0.7 0 1.1 0 1.1 0.5 2.4 0.5 3.6 0 0.5 0.1 0.9 0.1 1.4 0.1 0 0 0.1-0.1 0.1-0.1 0.3 0.4 0.8 0.6 1.2 0.2 0.5-0.5 0.5-1 0.2-1.4zM15.7 23.2c-0.3 0-0.6-0.1-0.9-0.2v0c-0.6-0.2-1.1-0.7-1.3-1.4v0c-0.1-0.3-0.1-0.5-0.1-0.8 0-1.3 1-2.3 2.3-2.3s2.3 1 2.3 2.3-1 2.4-2.3 2.4v0z"></path>
+                <path d="M5.3 11c0.1 0 0.1 0 0.1 0.1 0 0 0 0 0 0.1l0.3 0.2c0.7-0.5 1.4-1 2.3-1.6 0 0-0.1-0.2-0.1-0.2 0.4-0.3 0.6-0.7 0.4-1.2s-0.7-0.6-1.1-0.3c0 0 0-0.2-0.1-0.2-0.8 0.5-1.7 0.9-2.4 1.4v0.1c0.2 0 0.4 0.1 0.5 0.2 0.3 0.3 0.4 0.9 0.1 1.4z"></path>
+                <path d="M2.2 12.6c0.2-0.1 0.3-0.2 0.5-0.2 0.1 0 0.2 0 0.2 0 0.5 0.1 0.7 0.6 0.7 1.1h0.1c0.5-0.7 1-1.6 1.6-2.4 0 0-0.1-0.1-0.1-0.1 0.3-0.4 0.3-1-0.1-1.3s-0.9-0.2-1.2 0.3c0 0-0.1-0.2-0.1-0.1-0.6 0.7-1.3 1.4-1.8 2.1l0.2 0.6z"></path>
+                <path d="M1.4 16.4c0.1-0.1 0.3-0.2 0.4-0.3 0.1 0 0.2 0 0.3 0 0.4 0 0.6 0.2 0.8 0.6l0.2-0.1c0.2-0.9 0.3-1.8 0.5-2.9 0 0-0.2 0-0.2 0 0.1-0.5-0.1-1-0.5-1.1-0.5-0.1-0.9 0.2-1 0.7 0 0-0.2-0.1-0.2 0-0.2 1-0.6 1.9-0.8 2.8l0.3 0.3h0.2z"></path>
+                <path d="M3 19.6c0.2 0 0.5 0.1 0.7 0.3 0.1-0.1 0.1-0.1 0.1-0.1l0.2-0.2c-0.2-0.9-0.6-1.8-0.9-2.8 0 0-0.2 0.1-0.2 0.1-0.1-0.5-0.5-0.9-1-0.7-0.5 0.1-0.6 0.7-0.5 1.2 0 0-0.2 0-0.2 0.1 0.3 1 0.4 1.9 0.6 2.8l0.3 0.1c0-0.2 0.1-0.4 0.3-0.6s0.4-0.2 0.6-0.2z"></path>
+                <path d="M5.3 22.4c0.1 0 0.1 0 0.2 0l0.1-0.4c-0.6-0.7-1.2-1.3-1.9-2.1 0 0-0.1 0.1-0.1 0.1-0.3-0.4-0.8-0.5-1.2-0.2-0.4 0.4-0.3 0.9 0 1.3 0 0-0.2 0.1-0.1 0.1 0.6 0.8 1.1 1.6 1.7 2.3h0.4c0-0.2 0-0.4 0.1-0.5 0.2-0.4 0.5-0.6 0.8-0.6z"></path>
+                <path d="M8.5 24.1l-0.1-0.4c-0.8-0.4-1.6-0.7-2.5-1.1 0 0-0.1 0.2-0.1 0.2-0.5-0.2-0.9-0.1-1.2 0.4-0.2 0.5 0 1 0.5 1.2 0 0-0.1 0.2-0.1 0.2 0.8 0.4 1.6 1 2.4 1.4l0.3-0.2c-0.1-0.1-0.1-0.3-0.1-0.5 0-0.7 0.3-1.1 0.9-1.2z"></path>
+                <path d="M11.6 25.4c-0.2-0.2-0.3-0.4-0.3-0.7 0-0.2 0.1-0.4 0.2-0.6-0.1-0.1-0.1-0.1-0.1-0.2v-0.1l-0.1-0.1c-0.9 0.1-1.7 0.2-2.7 0.3 0 0 0 0.2 0 0.2-0.5 0-0.9 0.4-0.9 0.9s0.5 0.8 0.9 0.8c0 0 0 0.2 0 0.2 0.9-0.1 1.8 0 2.7 0l0.2-0.4 0.1-0.3c0 0.1 0 0.1 0 0z"></path>
+                <path d="M15.7 19.6c-0.6 0-1.2 0.5-1.2 1.2 0 0.6 0.5 1.2 1.2 1.2 0-0.4 0.3-0.7 0.6-0.7 0.1 0 0.2 0 0.3 0.1 0.3-0.5 0.2-1.3-0.4-1.6 0-0.1-0.3-0.2-0.5-0.2v0z"></path>
+                </symbol>
+                </defs>
+                </svg>
+<!-- Einde Icon codes --> 
+    </body>
+</html>

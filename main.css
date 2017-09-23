@@ -1,0 +1,286 @@
+/* Reset/vernieuwd de oude stuff */
+
+ * {
+     box-sizing: border-box;
+ }
+
+ body, html, ul, li {
+     margin: 0px;
+     padding: 0px;
+ }
+
+ h1, h2, h3, h4, h5, h6{
+     margin: 0.1em;
+ }
+
+ ul{
+     list-style-type: none;
+ }
+
+/* Hoofdonderdeel */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.centerContent {
+    width: var(--centerWidth);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    padding: 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    color: white;
+    background-color: #2ecc71;
+    border: none;
+
+    width: 12em;
+}
+
+.btnPro{
+    background-color: #f39c12;
+}
+
+
+
+/* Zorgt een soort van voor de layout van het uitleg gedeelte */
+
+
+:root {
+    --centerWidth: 80%;
+    --featuredItemRowDir: column;
+    --navRowDir: column;
+}
+
+@media(min-width: 1600px) {
+    :root {
+        --centerWidth: 40%;
+        --featuredItemRowDir: row;
+        --navRowDir: row;
+    }
+
+    .featuredItemRow:first-child {
+        flex-direction: row-reverse;
+    }
+}
+
+
+
+
+/* Navigatiebalk */
+
+.gaweg {
+    text-decoration: none; 
+    flex:1;
+    color: black;
+}
+
+.navRow {
+    display: flex;
+    font-size:  1.5em;
+    
+}
+
+.navRow > ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: var(--navRowDir);
+}
+
+.navRow > ul > li {
+    flex: 1;
+    padding: 1em;
+} 
+
+.navRow > ul > a > li {
+    flex: 1;
+    padding: 1em;
+} 
+
+.navRow > ul > li > a {
+    flex: 1;
+    padding: 1em;
+} 
+
+#navLogo {
+    flex: 4;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#navLogo {
+    font-size: 1.5em;
+    margin: 0.2em;
+}
+
+/* Hero balk of hoofdbalk idk */
+
+.heroRow {
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+    background-color: #2c3e50;
+
+    align-items: center;
+    text-align: center;
+
+    padding: 2em;
+}
+
+.heroRow > .centerContent > h1 {
+    text-transform: uppercase;
+}
+
+.buttonRow {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+/* Email */
+
+.emailRow {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #2ecc71;
+    background-image: url("img/sanfransiscoGreen.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+
+}
+
+.emailForm {
+    display: flex;
+    width: 100%;
+}
+
+.emailRow > .centerContent > h1 {
+    padding: 1em;
+}
+
+.emailForm > input[type="text"] {
+    flex: 8;
+    border: none;
+    padding: 1.2em;
+    text-align: center;
+}
+
+.emailForm > button {
+    flex: 1;
+
+    padding: 1rem;
+    font-weight: bold;
+    border: none;
+    background-color: #f39c12;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+/* Uitleg gedeelte */
+
+.featuresRow {
+    display: flex;
+    justify-content: center;
+
+}
+
+.featuredItemRow {
+    display: flex;
+    flex: 1;
+    flex-direction: var(--featuredItemRowDir);
+
+}
+
+.featuredItemBox {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+
+.featuredItemBox > img {
+    width: 80%;
+    height: auto;
+}
+
+/* Call to action */
+
+.onderstalaagje {
+    text-transform: uppercase;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    background-color: #2c3e50;
+    background-image: url("/img/NYCBlue.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+    padding: 4em;
+}
+
+.onderstalaagje > .centerContent > h1 {
+    padding: 1em;
+}
+
+/* Footer */
+
+.socialRow {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+
+.socialRow > .centerContent > ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.socialRow > .centerContent > ul > li {
+    background-color: #2c3e50;
+    border-radius: 50%;
+    text-align: center;
+    padding: 1.5em;
+    color: white;
+    fill: white;
+}
+
+/* Icoontjes */
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+
